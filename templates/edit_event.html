@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Редагувати подію{% endblock %}
+
+{% block content %}
+<h1>Редагувати подію</h1>
+<form method="POST">
+    <label for="title">Назва події:</label>
+    <input type="text" id="title" name="title" value="{{ event.title }}" required><br>
+
+    <label for="date">Дата:</label>
+    <input type="date" id="date" name="date" value="{{ event.date }}" required><br>
+
+    <label for="description">Опис:</label>
+    <textarea id="description" name="description" required>{{ event.description }}</textarea><br>
+
+    <button type="submit">Зберегти зміни</button>
+</form>
+{% endblock %}
